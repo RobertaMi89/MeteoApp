@@ -15,13 +15,13 @@ p {
 }
 .app:before {
   content: "";
-  background: url("./assets/media/ghost.png") no-repeat right bottom/cover;
+  background: url("./assets/media/sfondo.jpg") no-repeat right bottom/cover;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
 }
 .logo {
   background: url("./assets/media/banner1.png") no-repeat center center/contain;
@@ -30,8 +30,47 @@ p {
   overflow-x: hidden;
   position: relative;
   margin-top: 30px;
+  z-index: 1;
+}
+.sfondoBianco {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .title {
-  font-size: 80px;
+  font-size: 8em;
   margin-top: 50px;
+  font-family: "Gamja Flower", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 3.5em;
+    margin-top: 30px;
+  }
+}
+.searchBar {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  border: 2px solid #5dd4ce;
+  padding: 5px;
+  font-family: "Gamja Flower", sans-serif;
+  font-size: 1.5em;
+}
+@media only screen and (max-width: 600px) {
+  .searchBar {
+    width: 70%;
+    font-size: 1em;
+  }
+}
+.btn {
+  background-color: #5dd4ce;
+  border: none;
+}
+.btn:hover {
+  background-color: #40918d;
 }

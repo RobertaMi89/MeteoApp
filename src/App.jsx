@@ -7,7 +7,11 @@ export function App() {
   return (
     <>
       <Container fluid className="app m-0">
-        <CustomNavBar />
+        <Container>
+          <Container className="sfondoBianco">
+            <CustomNavBar />
+          </Container>
+        </Container>
       </Container>
     </>
   );

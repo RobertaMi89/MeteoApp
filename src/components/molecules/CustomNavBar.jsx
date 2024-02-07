@@ -55,19 +55,15 @@ export const CustomNavBar = () => {
                 onSubmit={(event) => handleFormSubmit(event)}
               >
                 <Form.Control
-                  style={{ width: "30%" }}
                   type="search"
                   value={location}
                   placeholder="Enter Location"
-                  className="me-2"
+                  className=" searchBar me-2"
                   onChange={(event) => setLocation(event.target.value)}
                   onKeyUp={(event) => handleFormSubmit(event)}
                   aria-label="Search"
                 />
-                <Button
-                  style={{ backgroundColor: "transparent", border: "none" }}
-                  onClick={() => handleButtonClick()}
-                >
+                <Button className="btn" onClick={() => handleButtonClick()}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
