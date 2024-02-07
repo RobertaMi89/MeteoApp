@@ -6,7 +6,7 @@ export const CustomCard = ({ meteoProp, bgImg }) => {
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    padding: "100px",
+    padding: "70px",
     marginBottom: "20px",
     maxHeight: "250px",
     border: 0,
@@ -15,20 +15,12 @@ export const CustomCard = ({ meteoProp, bgImg }) => {
   return (
     <div style={{ width: "500px", height: "auto" }}>
       <Card style={bgImg ? backgroundImageStyle : {}}>
-        <Card.Body
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.6)",
-            width: "100%",
-            height: "300px",
-          }}
-        >
+        <Card.Body className="cardBody">
           <Card.Title>
             <b>{meteoProp.name}</b>
           </Card.Title>
-
-          <Card.Text style={{ height: "50px" }}>
+          <Card.Text className="cardText">
             <img src={meteoProp.icon}></img>
-
             <b>{meteoProp.value}</b>
           </Card.Text>
         </Card.Body>

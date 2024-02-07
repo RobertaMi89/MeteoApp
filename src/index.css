@@ -3,9 +3,9 @@ body,
 p {
   margin: 0;
   padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Gamja Flower", sans-serif;
 }
+/*APP*/
 .app {
   width: 100%;
   height: 100vh;
@@ -23,6 +23,14 @@ p {
   left: 0;
   z-index: -2;
 }
+.sfondoBianco {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*BANNER*/
 .logo {
   background: url("./assets/media/banner1.png") no-repeat center center/contain;
   height: 300px;
@@ -32,16 +40,9 @@ p {
   margin-top: 30px;
   z-index: 1;
 }
-.sfondoBianco {
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.8);
-}
 .title {
   font-size: 8em;
   margin-top: 50px;
-  font-family: "Gamja Flower", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -52,13 +53,15 @@ p {
     margin-top: 30px;
   }
 }
+
+/*CUSTOM NAVBAR*/
 .searchBar {
   width: 30%;
   display: flex;
   align-items: center;
   border: 2px solid #5dd4ce;
   padding: 5px;
-  font-family: "Gamja Flower", sans-serif;
+
   font-size: 1.5em;
 }
 @media only screen and (max-width: 600px) {
@@ -73,4 +76,33 @@ p {
 }
 .btn:hover {
   background-color: #40918d;
+}
+/*DETAILPAGE*/
+.backgroundDetail {
+  height: 100vh;
+  background: url(../src/assets/media/studioghibli.jpg) center/cover no-repeat;
+}
+
+/*CUSTOMCARD*/
+.cardBody {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 300px;
+}
+.cardText {
+  height: 50px;
+}
+/*CARDS*/
+.sfondoBiancoDetail {
+  background-color: rgba(131, 180, 215, 0.5);
+  text-align: center;
+}
+.arrow {
+  width: 20px;
+  height: 20px;
+  color: #5e94ba;
+}
+/*CHART*/
+.bgChart {
+  background-color: rgba(255, 255, 255, 0.8);
 }

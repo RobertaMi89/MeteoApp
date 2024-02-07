@@ -1,12 +1,13 @@
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/esm/Container";
 import {
-  LineChart,
-  Line,
-  CartesianGrid,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
+  CartesianGrid,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
 const CustomFooter = ({ cityForecast }) => {
@@ -65,26 +66,31 @@ const CustomFooter = ({ cityForecast }) => {
   const dataForecast = buildForecastData(cityForecast.list);
 
   const renderLineChart = (
-    <Container className="m-0 p-0 mt-2">
-      <LineChart
+    <ResponsiveContainer className="m-0 p-0 ">
+      <AreaChart
         width={1100}
         height={200}
         data={dataForecast}
-        style={{ width: "95%" }}
+        style={{ width: "95%", height: 200 }}
+        margin={{
+          top: 10,
+          right: 30,
+          left: 0,
+        }}
       >
-        <Line type="monotone" dataKey="temperature" stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" wi />
+        <Area type="monotone" dataKey="temperature" stroke="#000000" />
+        <CartesianGrid stroke="#49473b" strokeDasharray="5 5" wi />
         <XAxis dataKey="date" />
         <YAxis />
         <Tooltip />
-      </LineChart>
-    </Container>
+      </AreaChart>
+    </ResponsiveContainer>
   );
   return (
     <>
-      <Container className="mt-5 d-flex justify-content-center">
-        <Card style={{ width: "89%" }}>
-          <Card.Body className="m-0 p-0">
+      <Container className=" d-flex justify-content-center">
+        <Card className="bgChart" style={{ width: "89%" }}>
+          <Card.Body className=" m-0 p-0">
             <p className="ps-2 pt-2">
               Temperatures around{" "}
               {`${new Date().getHours()}:${new Date().getMinutes()}`} in the

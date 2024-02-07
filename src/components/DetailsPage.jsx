@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import fetchData from "../utils/FetchData";
 import Cards from "./Cards";
-import CustomFooter from "./CustomFooter";
+import Chart from "./Chart";
 import Container from "react-bootstrap/esm/Container";
 
 export const DetailsPage = () => {
@@ -40,26 +40,12 @@ export const DetailsPage = () => {
   }, [state]);
 
   return (
-    <div>
-      <>
-        <Container
-          fluid
-          className="m-0 p-0"
-          style={{
-            height: "100vh",
-            backgroundImage: "url(../src/assets/media/studioghibli.jpg)",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          {city && forecast && (
-            <Cards cityData={city} cityForecast={forecast} />
-          )}
-          {city && forecast && <CustomFooter cityForecast={forecast} />}
-        </Container>
-      </>
-    </div>
+    <>
+      <Container fluid className="backgroundDetail m-0 p-0">
+        {city && forecast && <Cards cityData={city} cityForecast={forecast} />}
+        {city && forecast && <Chart cityForecast={forecast} />}
+      </Container>
+    </>
   );
 };
 
