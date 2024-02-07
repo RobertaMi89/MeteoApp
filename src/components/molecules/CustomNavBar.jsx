@@ -51,7 +51,7 @@ export const CustomNavBar = () => {
             <Banner />
             <Container style={{ width: "100%" }}>
               <Form
-                className="d-flex justify-content-center mt-2"
+                className="d-flex justify-content-center mt-5"
                 onSubmit={(event) => handleFormSubmit(event)}
               >
                 <Form.Control
@@ -84,7 +84,6 @@ export const CustomNavBar = () => {
           </Container>
         </Container>
       </Navbar>
-      <Cards cityData={city} />
     </>
   );
 };
