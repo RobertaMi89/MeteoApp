@@ -5,10 +5,10 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Cards from "../Cards";
 import fetchData from "../../utils/FetchData";
 import Banner from "../molecules/Banner";
 import "../../index.css";
+import { ApiKey } from "../../env";
 
 export const CustomNavBar = () => {
   const [location, setLocation] = useState("");
@@ -36,7 +36,7 @@ export const CustomNavBar = () => {
     if (event.code === "Enter") handleButtonClick();
   };
 
-  const urlData = `https://api.openweathermap.org/data/2.5/weather?q=roma,it&appid=4bb0ca7fe3d82827c0b62fca86878ab2&units=metric`;
+  const urlData = `https://api.openweathermap.org/data/2.5/weather?q=roma,it&appid=${ApiKey}&units=metric`;
 
   useEffect(() => {
     searchLocation();

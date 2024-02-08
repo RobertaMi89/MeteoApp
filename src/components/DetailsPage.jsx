@@ -4,6 +4,7 @@ import fetchData from "../utils/FetchData";
 import Cards from "./Cards";
 import Chart from "./Chart";
 import Container from "react-bootstrap/esm/Container";
+import { ApiKey } from "../env";
 
 export const DetailsPage = () => {
   const [forecast, setForecast] = useState(null);
@@ -11,7 +12,7 @@ export const DetailsPage = () => {
 
   const [city, setCity] = useState({});
 
-  const urlData = `https://api.openweathermap.org/data/2.5/weather?q=${state.location}&appid=4bb0ca7fe3d82827c0b62fca86878ab2&units=metric`;
+  const urlData = `https://api.openweathermap.org/data/2.5/weather?q=${state.location}&appid=${ApiKey}&units=metric`;
 
   useEffect(() => {
     const searchLocation = async () => {
@@ -25,7 +26,7 @@ export const DetailsPage = () => {
     };
     const fetchForecastData = async () => {
       try {
-        const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${state.location}&appid=4bb0ca7fe3d82827c0b62fca86878ab2&units=metric`;
+        const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${state.location}&appid=${ApiKey}&units=metric`;
         const response = await fetchData(urlForecast);
         setForecast(response);
       } catch (error) {
