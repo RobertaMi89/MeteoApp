@@ -88,7 +88,7 @@ const CustomFooter = ({ cityForecast }) => {
   );
   return (
     <>
-      <Container className=" d-flex justify-content-center">
+      <Container className=" d-flex justify-content-center ">
         <Card className="bgChart" style={{ width: "89%" }}>
           <Card.Body className=" m-0 p-0">
             <p className="ps-2 pt-2">
