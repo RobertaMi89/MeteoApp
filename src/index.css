@@ -81,7 +81,7 @@ p {
 /*DETAILPAGE*/
 .backgroundDetail {
   height: 100vh;
-  background: url(../src/assets/media/studioghibli.jpg) center/cover no-repeat;
+  background: url(./assets/media/studioghibli.jpg) center/cover no-repeat;
 }
 
 /*CUSTOMCARD*/

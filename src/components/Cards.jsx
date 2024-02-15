@@ -2,6 +2,13 @@ import CustomCard from "./CustomCard";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowLeftCircleFill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
+import giphytotoro from "../assets/media/GIF/giphytotoro.gif";
+import humidityicon from "../assets/media/icon/humidityicon.png";
+import studioghibpioggiaicon from "../assets/media/icon/studio-ghibpioggiaicon.png";
+import sialzailvento from "../assets/media/GIF/sialzailvento.gif";
+import ponyo from "../assets/media/GIF/ponyo.gif";
+import temperatureicon from "../assets/media/icon/temperatureicon.png";
+import calcifer from "../assets/media/GIF/calcifer.gif";
 
 const Cards = ({ cityData }) => {
   const dataExists = Object.keys(cityData).length;
@@ -12,7 +19,7 @@ const Cards = ({ cityData }) => {
           <Container fluid className="sfondoBiancoDetail">
             <Row className=" pt-1 mb-3">
               <Col className="d-flex align-items-center">
-                <Link to="/">
+                <Link to="/MeteoApp">
                   <ArrowLeftCircleFill className="arrow" />
                 </Link>
                 <h2 className="text-dark mb-2 ms-5">
@@ -30,9 +37,9 @@ const Cards = ({ cityData }) => {
                   meteoProp={{
                     name: "Wind Speed",
                     value: cityData.wind.speed + " km/h",
-                    icon: "./src/assets/media/icon/studio-ghibpioggiaicon.png",
+                    icon: studioghibpioggiaicon,
                   }}
-                  bgImg={"./src/assets/media/GIF/sialzailvento.gif"}
+                  bgImg={sialzailvento}
                   className="wind"
                 />
               </Col>
@@ -43,7 +50,7 @@ const Cards = ({ cityData }) => {
                     value: cityData.weather[0].description,
                     icon: `http://openweathermap.org/img/wn/${cityData.weather[0].icon}.png`,
                   }}
-                  bgImg={"./src/assets/media/GIF/giphytotoro.gif"}
+                  bgImg={giphytotoro}
                 ></CustomCard>
               </Col>
               <Col className="d-flex justify-content-center">
@@ -51,9 +58,9 @@ const Cards = ({ cityData }) => {
                   meteoProp={{
                     name: "Humidity",
                     value: cityData.main.humidity + "%",
-                    icon: "./src/assets/media/icon/humidityicon.png",
+                    icon: humidityicon,
                   }}
-                  bgImg={"./src/assets/media/GIF/ponyo.gif"}
+                  bgImg={ponyo}
                 />
               </Col>
               <Col className="d-flex justify-content-center">
@@ -61,9 +68,9 @@ const Cards = ({ cityData }) => {
                   meteoProp={{
                     name: "Temperature",
                     value: Math.floor(cityData.main.temp) + "°",
-                    icon: "./src/assets/media/icon/temperatureicon.png",
+                    icon: temperatureicon,
                   }}
-                  bgImg={"./src/assets/media/GIF/calcifer.gif"}
+                  bgImg={calcifer}
                 />
               </Col>
             </Row>

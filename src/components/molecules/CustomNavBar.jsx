@@ -17,7 +17,7 @@ export const CustomNavBar = () => {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate("/details", { state: { location } });
+    navigate("/MeteoApp/details", { state: { location } });
   };
 
   const searchLocation = async () => {
