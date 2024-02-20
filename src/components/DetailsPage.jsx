@@ -5,6 +5,8 @@ import Cards from "./Cards";
 import Chart from "./Chart";
 import Container from "react-bootstrap/esm/Container";
 import { ApiKey } from "../env";
+import DetailsNavBar from "./atoms/DetailsNavBar";
+import CityNotFound from "./atoms/CityNotFound";
 
 export const DetailsPage = () => {
   const [forecast, setForecast] = useState(null);
@@ -40,11 +42,23 @@ export const DetailsPage = () => {
     }
   }, [state]);
 
+  const dataExists = city && forecast;
   return (
     <>
       <Container fluid className="backgroundDetail m-0 p-0">
-        {city && forecast && <Cards cityData={city} cityForecast={forecast} />}
-        {city && forecast && <Chart cityForecast={forecast} />}
+        <DetailsNavBar cityData={city} />
+        {dataExists ? (
+          <>
+            {city && forecast && (
+              <Cards cityData={city} cityForecast={forecast} />
+            )}
+            {city && forecast && <Chart cityForecast={forecast} />}
+          </>
+        ) : (
+          <>
+            <CityNotFound />
+          </>
+        )}
       </Container>
     </>
   );
