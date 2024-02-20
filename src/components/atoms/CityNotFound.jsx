@@ -6,14 +6,14 @@ import CustomCard from "../CustomCard";
 const CityNotFound = () => {
   return (
     <>
-      <Container>
-        <Row xs={1} md={2}>
-          <Col className="d-flex justify-content-center">
+      <Container fluid className="mt-5">
+        <Row>
+          <Col className="d-flex justify-content-center mt-5">
             <CustomCard
               meteoProp={{
-                name: "City not found",
-                value: "",
-                icon: "",
+                name: "",
+                value: " Sorry, city not found!",
+                icon: "./src/assets/media/GIF/spirited.gif",
               }}
               bgImg={meh}
             />
