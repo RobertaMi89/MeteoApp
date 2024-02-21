@@ -17,7 +17,7 @@ const CityNotFound = () => {
               >
                 <Card.Body className="cardBodyNotFound">
                   <Card.Text className="cardTextNotFound">
-                    <b>City not Found</b>
+                    <b>CITY NOT FOUND</b>
                   </Card.Text>
                 </Card.Body>
               </Card>

@@ -112,22 +112,23 @@ p {
   width: 100%;
 }
 .cardTextNotFound {
-  margin-top: 20%;
+  margin-top: 30%;
   font-size: 3em;
   text-align: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 @media only screen and (max-width: 600px) {
   .cardTextNotFound {
-    margin-top: 30%;
+    margin-top: 35%;
     font-size: 2em;
     text-align: center;
     align-items: center;
   }
 }
 .cardBodyNotFound {
-  background-color: rgba(255, 255, 255, 0.6);
   width: auto;
   height: 300px;
-  margin: 40px;
+  margin: 30px 0 30px 0;
+  padding: 0;
 }
