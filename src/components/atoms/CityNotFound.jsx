@@ -2,21 +2,26 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import meh from "../../assets/media/GIF/meh.gif";
-import CustomCard from "../CustomCard";
+
+import { Card } from "react-bootstrap";
 const CityNotFound = () => {
   return (
     <>
       <Container fluid className="mt-5">
         <Row>
           <Col className="d-flex justify-content-center mt-5">
-            <CustomCard
-              meteoProp={{
-                name: "",
-                value: " Sorry, city not found!",
-                icon: "./src/assets/media/GIF/spirited.gif",
-              }}
-              bgImg={meh}
-            />
+            <Container style={{ width: "500px", height: "auto" }}>
+              <Card
+                style={{ backgroundImage: `url(${meh})` }}
+                className="cardNotFound"
+              >
+                <Card.Body className="cardBodyNotFound">
+                  <Card.Text className="cardTextNotFound">
+                    <b>City not Found</b>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Container>
           </Col>
         </Row>
       </Container>
